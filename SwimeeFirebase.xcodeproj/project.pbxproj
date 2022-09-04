@@ -13,6 +13,11 @@
 		CACBB69428C4C4C400B22563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CACBB69228C4C4C400B22563 /* Main.storyboard */; };
 		CACBB69628C4C4C600B22563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CACBB69528C4C4C600B22563 /* Assets.xcassets */; };
 		CACBB69928C4C4C600B22563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CACBB69728C4C4C600B22563 /* LaunchScreen.storyboard */; };
+		CACBB6A428C4CD5200B22563 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CACBB6A328C4CD5200B22563 /* GoogleService-Info.plist */; };
+		CACBB6AE28C4D1AF00B22563 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CACBB6AD28C4D1AF00B22563 /* FirebaseFirestore */; };
+		CACBB6B028C4D1AF00B22563 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CACBB6AF28C4D1AF00B22563 /* FirebaseFirestoreCombine-Community */; };
+		CACBB6B228C4D1AF00B22563 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CACBB6B128C4D1AF00B22563 /* FirebaseFirestoreSwift */; };
+		CACBB6B428C4E85300B22563 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACBB6B328C4E85300B22563 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,8 @@
 		CACBB69528C4C4C600B22563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CACBB69828C4C4C600B22563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CACBB69A28C4C4C600B22563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CACBB6A328C4CD5200B22563 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CACBB6B328C4E85300B22563 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CACBB6AE28C4D1AF00B22563 /* FirebaseFirestore in Frameworks */,
+				CACBB6B028C4D1AF00B22563 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				CACBB6B228C4D1AF00B22563 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +66,11 @@
 		CACBB68B28C4C4C400B22563 /* SwimeeFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				CACBB6A328C4CD5200B22563 /* GoogleService-Info.plist */,
 				CACBB68C28C4C4C400B22563 /* AppDelegate.swift */,
 				CACBB68E28C4C4C400B22563 /* SceneDelegate.swift */,
 				CACBB69028C4C4C400B22563 /* ViewController.swift */,
+				CACBB6B328C4E85300B22563 /* Post.swift */,
 				CACBB69228C4C4C400B22563 /* Main.storyboard */,
 				CACBB69528C4C4C600B22563 /* Assets.xcassets */,
 				CACBB69728C4C4C600B22563 /* LaunchScreen.storyboard */,
@@ -83,6 +95,11 @@
 			dependencies = (
 			);
 			name = SwimeeFirebase;
+			packageProductDependencies = (
+				CACBB6AD28C4D1AF00B22563 /* FirebaseFirestore */,
+				CACBB6AF28C4D1AF00B22563 /* FirebaseFirestoreCombine-Community */,
+				CACBB6B128C4D1AF00B22563 /* FirebaseFirestoreSwift */,
+			);
 			productName = SwimeeFirebase;
 			productReference = CACBB68928C4C4C400B22563 /* SwimeeFirebase.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = CACBB68028C4C4C400B22563;
+			packageReferences = (
+				CACBB6AC28C4D1AF00B22563 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = CACBB68A28C4C4C400B22563 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +147,7 @@
 			files = (
 				CACBB69928C4C4C600B22563 /* LaunchScreen.storyboard in Resources */,
 				CACBB69628C4C4C600B22563 /* Assets.xcassets in Resources */,
+				CACBB6A428C4CD5200B22563 /* GoogleService-Info.plist in Resources */,
 				CACBB69428C4C4C400B22563 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +162,7 @@
 				CACBB69128C4C4C400B22563 /* ViewController.swift in Sources */,
 				CACBB68D28C4C4C400B22563 /* AppDelegate.swift in Sources */,
 				CACBB68F28C4C4C400B22563 /* SceneDelegate.swift in Sources */,
+				CACBB6B428C4E85300B22563 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +380,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CACBB6AC28C4D1AF00B22563 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CACBB6AD28C4D1AF00B22563 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CACBB6AC28C4D1AF00B22563 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CACBB6AF28C4D1AF00B22563 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CACBB6AC28C4D1AF00B22563 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		CACBB6B128C4D1AF00B22563 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CACBB6AC28C4D1AF00B22563 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CACBB68128C4C4C400B22563 /* Project object */;
 }
