@@ -24,7 +24,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addAction(.init(handler: { _ in
             self.refreshTableView()
-            self.tableView.refreshControl?.endRefreshing()
         }), for: .valueChanged)
         
         refreshTableView()
@@ -49,8 +48,9 @@ class ViewController: UIViewController, UITableViewDataSource {
                 //     .sorted(using: KeyPathComparator(\.createdAt, order: .reverse))
                 
                 tableView.reloadData()
+                tableView.refreshControl?.endRefreshing()
             } catch {
-                print("エラーが発生しました: \(error)")
+                print("エラーが発生しました: \(error.localizedDescription)")
             }
         }
     }
@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                 textField.text?.removeAll()
                 refreshTableView()
             } catch {
-                print("エラーが発生しました: \(error)")
+                print("エラーが発生しました: \(error.localizedDescription)")
             }
         }
     }
